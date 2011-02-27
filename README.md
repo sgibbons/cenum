@@ -20,7 +20,7 @@ Symbols are great. You should probably keep on using symbols in most of the plac
     require 'cenum.rb'
 
     class PetOwner
-      
+
       ANIMALS = enum :cat, :dog, :bird
 
       def initialize(animal)
@@ -44,7 +44,7 @@ Symbols are great. You should probably keep on using symbols in most of the plac
 ## Features
 
   * Enum values map to integers
-        
+
         irb> DIRECTIONS = enum :up, :down, :left, :right
         irb> DIRECTIONS::Up
         0
@@ -89,8 +89,5 @@ Symbols are great. You should probably keep on using symbols in most of the plac
 ## Roadmap
 
   * Custom value mappings, like c's:
-        
+
         enum DAY { saturday, sunday = 0, monday, tuesday, ... etc }
-
-
-
