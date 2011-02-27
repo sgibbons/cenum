@@ -12,13 +12,14 @@ class Enum
     @value = self.class[name]
   end
 
-  def ==(other)
+  def <=>(other)
     if Enum === other
-      @value == other.__value__
+      @value <=> other.__value__
     else
-      @value == other
+      @value <=> other
     end
   end
+  include Comparable
 
   protected
 

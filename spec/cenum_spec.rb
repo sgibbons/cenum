@@ -36,6 +36,7 @@ describe 'enum' do
       it "can be compared" do
         @val1.should == @val1
         @val1.should_not == @val2
+        @val1.should < @val2
       end
 
       it "has value? getter" do

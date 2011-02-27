@@ -86,6 +86,13 @@ Symbols are great. You should probably keep on using symbols in most of the plac
         irb> yes != Boolean::FALSE
         true
 
+  * Values can be compared
+
+        irb> up = DIRECTIONS.new(:up)
+        irb> down = DIRECTIONS.new(:down)
+        irb> up < down
+        true
+
 ## Roadmap
 
   * Custom value mappings, like c's:
