@@ -17,7 +17,7 @@ Symbols are great. You should probably keep on using symbols in most of the plac
 
 ## Basic Usage
 
-    require 'cenum.rb'
+    require 'cenum'
 
     class PetOwner
 
