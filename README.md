@@ -10,7 +10,7 @@ Symbols are great. You should probably keep on using symbols in most of the plac
   > The set of values that a variable can take on define that variable's type. Rather than just scattering symbols throughout your code that modifes the variable, it is frequently helpful to encapsulate the type information in one place. An enum, being a lightweight, in-line class definition, is an ideal place to do this. Examples of this type of situation would be when you need to represent days-of-the-week or drink sizes available
         DAY_OF_WEEK = enum :sun, :mon, :tues, :wed, :thurs, :fri, :sat
         DRINK_SIZE = enum :small, :medium, :large
-  * A dual name/value represantation is need. This is particularly common when you have a set of possible values with an inherent ordering.
+  * A dual name/value representation is needed. This is particularly common when you have a set of possible values with an inherent ordering.
   > Enums have the property of defining both names and values, so you can sometimes get the best of both worlds by using them.
         DRINK_SIZE = enum :small, :medium, :large
         DRINK_SIZE::Small < DRINK_SIZE::Large  # true
