@@ -8,12 +8,12 @@ Symbols are great. You should probably keep on using symbols in most of the plac
 
   * A variable can take on a finite set of known, named, values.
   > The set of values that a variable can take on define that variable's type. Rather than just scattering symbols throughout your code that modifes the variable, it is frequently helpful to encapsulate the type information in one place. An enum, being a lightweight, in-line class definition, is an ideal place to do this. Examples of this type of situation would be when you need to represent days-of-the-week or drink sizes available
-        DAY_OF_WEEK = enum :sun, :mon, :tues, :wed, :thurs, :fri, :sat
-        DRINK_SIZE = enum :small, :medium, :large
+        DayOfWeek = enum :sun, :mon, :tues, :wed, :thurs, :fri, :sat
+        DrinkSize = enum :small, :medium, :large
   * A dual name/value representation is needed. This is particularly common when you have a set of possible values with an inherent ordering.
   > Enums have the property of defining both names and values, so you can sometimes get the best of both worlds by using them.
-        DRINK_SIZE = enum :small, :medium, :large
-        DRINK_SIZE::SMALL < DRINK_SIZE::LARGE  # true
+        DrinkSize = enum :small, :medium, :large
+        DrinkSize::SMALL < DrinkSize::LARGE  # true
 
 ## Basic Usage
 
@@ -21,23 +21,23 @@ Symbols are great. You should probably keep on using symbols in most of the plac
 
     class PetOwner
 
-      ANIMALS = enum :cat, :dog, :bird
+      Animals = enum :cat, :dog, :bird
 
       def initialize(animal)
-        @animal = animal || ANIMALS::DOG
+        @animal = animal || Animals::DOG
       end
 
       def pet_says
         case @animal
-          when ANIMALS::CAT then 'meow'
-          when ANIMALS::DOG then 'woof'
-          when ANIMALS::BIRD then 'tweet'
+          when Animals::CAT then 'meow'
+          when Animals::DOG then 'woof'
+          when Animals::BIRD then 'tweet'
         end
       end
 
     end
 
-    bird_owner = PetOwner.new(PetOwner::ANIMALS::BIRD)
+    bird_owner = PetOwner.new(PetOwner::Animals::BIRD)
 
     bird_owner.pet_says  # 'tweet'
 
@@ -45,15 +45,15 @@ Symbols are great. You should probably keep on using symbols in most of the plac
 
   * Enums contain a list of their values
 
-        irb> DIRECTIONS = enum :up, :down, :left, :right
-        irb> DIRECTIONS.values
+        irb> Directions = enum :up, :down, :left, :right
+        irb> Directions.values
         [:up, :down, :left, :right]
 
   * Enum values map to integers
 
-        irb> DIRECTIONS::UP
+        irb> Directions::UP
         0
-        irb> DIRECTIONS::DOWN
+        irb> Directions::DOWN
         1
 
   * Enum declaration is type declaration
@@ -93,8 +93,8 @@ Symbols are great. You should probably keep on using symbols in most of the plac
 
   * Values can be compared
 
-        irb> up = DIRECTIONS.new(:up)
-        irb> down = DIRECTIONS.new(:down)
+        irb> up = Directions.new(:up)
+        irb> down = Directions.new(:down)
         irb> up < down
         true
 
@@ -107,4 +107,4 @@ Symbols are great. You should probably keep on using symbols in most of the plac
 
   * Custom value mappings, like c's:
 
-        enum DAY { saturday, sunday = 0, monday, tuesday, ... etc }
+        enum Day { saturday, sunday = 0, monday, tuesday, ... etc }
