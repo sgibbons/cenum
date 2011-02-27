@@ -93,6 +93,11 @@ Symbols are great. You should probably keep on using symbols in most of the plac
         irb> up < down
         true
 
+  * Values can be compared to their names
+
+        irb> up == :up
+        true
+
 ## Roadmap
 
   * Custom value mappings, like c's:

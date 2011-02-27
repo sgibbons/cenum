@@ -13,8 +13,11 @@ class Enum
   end
 
   def <=>(other)
-    if Enum === other
+    case other
+    when Enum
       @value <=> other.__value__
+    when String, Symbol
+      @value <=> self.class[other]
     else
       @value <=> other
     end

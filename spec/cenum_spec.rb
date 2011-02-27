@@ -56,6 +56,10 @@ describe 'enum' do
         @val1.should_not == @enum::VAL2
       end
 
+      it "can be compared to values name" do
+        @val1.should == :val1
+      end
+
     end # instantiated
 
   end # value
