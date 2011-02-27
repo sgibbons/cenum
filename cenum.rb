@@ -1,4 +1,3 @@
-
 def enum(*names)
   klass = Class.new
   names.map(&:to_s).each_with_index do |name, index| 
@@ -11,4 +10,3 @@ def enum(*names)
   klass.send(:define_method, :__value__, lambda { @value })
   return klass
 end
-
