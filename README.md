@@ -58,6 +58,12 @@ Symbols are great. You should probably keep on using symbols in most of the plac
         irb> no = Boolean.new(:false)
         irb> yes == no
         false
+
+  * Value checks and mutators generated automatically
+
+        irb> Boolean = enum :true, :false
+        irb> yes = Boolean.new(:true)
+        irb> no = Boolean.new(:false)
         irb> yes.true?
         true
         irb> false.true?
@@ -71,18 +77,20 @@ Symbols are great. You should probably keep on using symbols in most of the plac
         irb> maybe == no
         true
 
+  * Direct comparison of type instances with value names
+
+        irb> Boolean = enum :true, :false
+        irb> yes = Boolean.new(:true)
+        irb> yes == Boolean::True
+        true
+        irb> yes != Boolean::False
+        true
+
 ## Roadmap
 
   * Custom value mappings, like c's:
         
         enum DAY { saturday, sunday = 0, monday, tuesday, ... etc }
-
-  * Comparisons between named values and type instances:
-
-        irb> Boolean = enum :true, :false
-        irb> yes = Boolean.new(:true)
-        irb> yes == Boolean::True  # not currently supported
-        true
 
 
 
