@@ -43,9 +43,16 @@ Symbols are great. You should probably keep on using symbols in most of the plac
 
 ## Features
 
-  * Enum values map to integers
+  * Enums contain a list of their values
 
         irb> DIRECTIONS = enum :up, :down, :left, :right
+        irb> DIRECTIONS.values
+        {:up   => DIRECTION::UP, :down => DIRECTION::DOWN, :left => DIRECTION::LEFT, :down => DIRECTION::RIGHT}
+        irb> DIRECTIONS.values_name
+        [:up, :down, :left, :right]
+
+  * Enum values map to integers
+
         irb> DIRECTIONS::UP
         0
         irb> DIRECTIONS::DOWN

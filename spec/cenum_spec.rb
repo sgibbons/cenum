@@ -14,6 +14,10 @@ describe 'enum' do
     @enum.constants.should include(:VAL1)
   end
 
+  it "are its values accessible using #values" do
+    @enum.values.should == [:val1, :val2]
+  end
+
   describe 'value' do
 
     it "are Fixnum" do

@@ -39,6 +39,7 @@ class Object
       klass.send(:define_method, "#{name}?", lambda { @value == klass[name] })
       klass.send(:define_method, "#{name}!", lambda { @value =  klass[name] })
     end
+    (class << klass ; self ; end).send(:define_method, :values){ names }
     return klass
   end
 end
