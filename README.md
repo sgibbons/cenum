@@ -103,8 +103,20 @@ Symbols are great. You should probably keep on using symbols in most of the plac
         irb> up == :up
         true
 
+  * Custom value mappings
+
+        irb> Drinks = enum :small, :medium, :large, :infinite => -1
+        irb> Drinks::SMALL
+        0
+        irb> Drinks::MEDIUM
+        1
+        irb> Drinks::INFINITE
+        -1
+
 ## Roadmap
 
-  * Custom value mappings, like c's:
-
-        enum Day { saturday, sunday = 0, monday, tuesday, ... etc }
+  * Improve custom value mappings
+    * Spec
+    * Prevent collisions
+    * Allow non-integer value mappings
+    * Consider using a DSL to improve syntax (gets messy in some cases currently)
