@@ -13,7 +13,7 @@ Symbols are great. You should probably keep on using symbols in most of the plac
   * A dual name/value representation is needed. This is particularly common when you have a set of possible values with an inherent ordering.
   > Enums have the property of defining both names and values, so you can sometimes get the best of both worlds by using them.
         DRINK_SIZE = enum :small, :medium, :large
-        DRINK_SIZE::Small < DRINK_SIZE::Large  # true
+        DRINK_SIZE::SMALL < DRINK_SIZE::LARGE  # true
 
 ## Basic Usage
 
@@ -24,14 +24,14 @@ Symbols are great. You should probably keep on using symbols in most of the plac
       ANIMALS = enum :cat, :dog, :bird
 
       def initialize(animal)
-        @animal = animal || ANIMALS::Dog
+        @animal = animal || ANIMALS::DOG
       end
 
       def pet_says
         case @animal
-          when ANIMALS::Cat then 'meow'
-          when ANIMALS::Dog then 'woof'
-          when ANIMALS::Bird then 'tweet'
+          when ANIMALS::CAT then 'meow'
+          when ANIMALS::DOG then 'woof'
+          when ANIMALS::BIRD then 'tweet'
         end
       end
 
@@ -46,9 +46,9 @@ Symbols are great. You should probably keep on using symbols in most of the plac
   * Enum values map to integers
 
         irb> DIRECTIONS = enum :up, :down, :left, :right
-        irb> DIRECTIONS::Up
+        irb> DIRECTIONS::UP
         0
-        irb> DIRECTIONS::Down
+        irb> DIRECTIONS::DOWN
         1
 
   * Enum declaration is type declaration
@@ -81,9 +81,9 @@ Symbols are great. You should probably keep on using symbols in most of the plac
 
         irb> Boolean = enum :true, :false
         irb> yes = Boolean.new(:true)
-        irb> yes == Boolean::True
+        irb> yes == Boolean::TRUE
         true
-        irb> yes != Boolean::False
+        irb> yes != Boolean::FALSE
         true
 
 ## Roadmap

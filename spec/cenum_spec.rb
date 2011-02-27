@@ -11,14 +11,14 @@ describe 'enum' do
   end
 
   it "includes its values as constants" do
-    @enum.constants.should include(:Val1)
+    @enum.constants.should include(:VAL1)
   end
 
   describe 'value' do
 
     it "are Fixnum" do
-      @enum::Val1.should == 0
-      @enum::Val2.should == 1
+      @enum::VAL1.should == 0
+      @enum::VAL2.should == 1
     end
 
     it "can be instantiated" do
@@ -51,8 +51,8 @@ describe 'enum' do
       end
 
       it "can be compared to values" do
-        @val1.should == @enum::Val1
-        @val1.should_not == @enum::Val2
+        @val1.should == @enum::VAL1
+        @val1.should_not == @enum::VAL2
       end
 
     end # instantiated
