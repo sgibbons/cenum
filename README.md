@@ -8,15 +8,25 @@ This project is an attempt to provide c-style enums for ruby. It's obviously imp
 
     class PetOwner
       
-      ANIMALS = enum :cat, :dog, :monkey
+      ANIMALS = enum :cat, :dog, :bird
 
       def initialize(animal)
-        self.animal = animal || ANIMALS::Dog
+        @animal = animal || ANIMALS::Dog
+      end
+
+      def pet_says
+        case @animal
+          when ANIMALS::Cat then 'meow'
+          when ANIMALS::Dog then 'woof'
+          when ANIMALS::Bird then 'tweet'
+        end
       end
 
     end
 
-    zoologist = PetOwner.new(PetOwner::ANIMALS::Monkey)
+    bird_owner = PetOwner.new(PetOwner::ANIMALS::Bird)
+
+    bird_owner.pet_says  # 'tweet'
 
 ## Features
 
