@@ -42,7 +42,7 @@ module Kernel
         counter = name.values.first
         name = name.keys.first
       end
-      klass.const_set klass.constant_name(name.capitalize), counter
+      klass.const_set(klass.constant_name(name), counter)
       klass.send(:define_method, "#{name}?", lambda { @value == klass[name] })
       klass.send(:define_method, "#{name}!", lambda { @value = klass[name] })
       counter += 1
