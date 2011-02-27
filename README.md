@@ -1,6 +1,6 @@
 # C-style enums for ruby
 
-Full readme can be found here: https://github.com/microsage/cenum
+Full readme can be found at [microsage's branch](https://github.com/microsage/cenum)
 
 ## New features
 
