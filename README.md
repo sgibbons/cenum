@@ -66,7 +66,7 @@ Symbols are great. You should probably keep on using symbols in most of the plac
         irb> no = Boolean.new(:false)
         irb> yes.true?
         true
-        irb> false.true?
+        irb> no.true?
         false
         irb> maybe = Boolean.new(:true)
         irb> maybe == yes
