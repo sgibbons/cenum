@@ -37,7 +37,7 @@ Symbols are great. You should probably keep on using symbols in most of the plac
 
     end
 
-    bird_owner = PetOwner.new(PetOwner::ANIMALS::Bird)
+    bird_owner = PetOwner.new(PetOwner::ANIMALS::BIRD)
 
     bird_owner.pet_says  # 'tweet'
 
