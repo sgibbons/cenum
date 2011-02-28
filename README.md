@@ -120,3 +120,4 @@ Symbols are great. You should probably keep on using symbols in most of the plac
     * Prevent collisions
     * Allow non-integer value mappings
     * Consider using a DSL to improve syntax (gets messy in some cases currently)
+  * Convert to Gem
