@@ -1,4 +1,4 @@
-require File.join(File.dirname(__FILE__), '..', 'cenum')
+require File.join(File.dirname(__FILE__), '../lib', 'cenum')
 
 require 'rspec'
 
