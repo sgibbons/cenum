@@ -113,6 +113,18 @@ Symbols are great. You should probably keep on using symbols in most of the plac
         irb> Drinks::INFINITE
         -1
 
+
+## Installation
+    $ gem install cenum
+
+
+## Building it yourself
+    $ git clone git@github.com:microsage/cenum.git
+    $ cd cenum
+    $ gem build cenum.gemspec
+    $ gem install cenum
+
+
 ## Roadmap
 
   * Improve custom value mappings
@@ -120,4 +132,3 @@ Symbols are great. You should probably keep on using symbols in most of the plac
     * Prevent collisions
     * Allow non-integer value mappings
     * Consider using a DSL to improve syntax (gets messy in some cases currently)
-  * Convert to Gem
